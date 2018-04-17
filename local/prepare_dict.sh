@@ -1,0 +1,36 @@
+#!/bin/bash
+#
+# Copyright  2014 Nickolay V. Shmyrev
+#            2014 Brno University of Technology (Author: Karel Vesely)
+#            2016 Daniel Galvez
+#            2016 Vincent Nguyen
+# Apache 2.0
+# Modified by Sidhi Adkoli for language recognition project (COMS 6998).
+
+export LC_ALL=C
+
+dir=data/local/dict_nosp
+mkdir -p $dir
+
+cat db/sa3505_data/*/word_dict | sort > $dir/lexicon_words.txt
+cat db/sa3505_data/*/wordlist | sort | uniq > data/wordlist
+
+
+cat $dir/lexicon_words.txt | awk '{ for(n=2;n<=NF;n++){ phones[$n] = 1; }} END{for (p in phones) print p;}' | \
+  grep -v SIL | sort > $dir/nonsilence_phones.txt
+
+( echo SIL; echo NSN ) > $dir/silence_phones.txt
+
+echo SIL > $dir/optional_silence.txt
+
+# No "extra questions" in the input to this setup, as we don't
+# have stress or tone.
+echo -n >$dir/extra_questions.txt
+
+# Add to the lexicon the silences, noises etc.
+# Typically, you would use "<UNK> NSN" here, but the Cantab Research language models
+# use <unk> instead of <UNK> to represent out of vocabulary words.
+echo '<unk> NSN' | cat - $dir/lexicon_words.txt | sort | uniq > $dir/lexicon.txt
+
+# Check that the dict dir is okay!
+utils/validate_dict_dir.pl $dir || exit 1

@@ -1,0 +1,34 @@
+exp/tri3/decode_dev.si 0.0177320684457842
+exp/tri3/decode_test.si 0.08440243079000675
+exp/chain_cleaned/tdnn1f_sp_bi/decode_dev 0.01773049645390071
+exp/chain_cleaned/tdnn1f_sp_bi/decode_test 0.008427439743805832
+
+# Results with trigram LM
+exp/tri3/decode_dev.si 0.07977308987768127
+exp/tri3/decode_test.si 0.16847780304944823
+
+exp/tri3/decode_dev.si 0.03546099290780142
+exp/tri3/decode_dev 0.01773049645390071
+exp/tri3/decode_test.si 0.0842034355001684
+exp/tri3/decode_test 0.08421761832575374
+exp/chain_cleaned/tdnn1f_sp_bi/decode_dev 0.06204023752548082
+exp/chain_cleaned/tdnn1f_sp_bi/decode_test 0.05053057099545225
+
+
+exp/chain_cleaned/tdnn1f_sp_bi/decode_test 0.2610746168098366
+exp/chain_cleaned/tdnn1f_sp_bi/decode_dev 0.24816095010192327
+exp/chain_cleaned/tdnn1f_sp_bi/decode_dev 0.24816095010192327
+exp/chain_cleaned/tdnn1f_sp_bi/decode_test 0.2610746168098366
+exp/chain_cleaned/tdnn1f_sp_bi/decode_dev 0.25702384117699195
+exp/chain_cleaned/tdnn1f_sp_bi/decode_test 0.2610746168098366
+exp/chain_cleaned/tdnn1f_sp_bi/decode_dev 0.24816095010192327
+exp/chain_cleaned/tdnn1f_sp_bi/decode_test 0.2610746168098366
+exp/chain_cleaned/tdnn1f_sp_bi/decode_dev 0.05317734645041213
+exp/chain_cleaned/tdnn1f_sp_bi/decode_test 0.05053057099545225
+exp/chain_cleaned/tdnn1f_sp_bi/decode_dev 0.06204023752548082
+exp/chain_cleaned/tdnn1f_sp_bi/decode_test 0.05053057099545225
+exp/chain_cleaned/tdnn1f_sp_bi/decode_dev 0.24816095010192327
+exp/chain_cleaned/tdnn1f_sp_bi/decode_dev 0.25702384117699195
+exp/chain_cleaned/tdnn1f_sp_bi/decode_test 0.2610746168098366
+exp/tri3/decode_test 0.29476166414013816
+exp/tri3/decode_dev 0.2925531914893617
